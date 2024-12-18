@@ -31,11 +31,7 @@ def define_even(name: str) -> bool:
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
-        print
-        (
-            f"'{answer}' is wrong answer ;(. "
-            f"Correct answer was '{correct_answer}'."
-        )
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
         print(f"Let's try again, {name}!")
         return False
 
