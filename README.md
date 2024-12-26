@@ -9,3 +9,6 @@
 
 ### brain-calc asciinema
 <a href="https://asciinema.org/a/HaXl1NhKIC2Xkp1xfqr1xbqW3" target="_blank"><img src="https://asciinema.org/a/HaXl1NhKIC2Xkp1xfqr1xbqW3.svg" /></a>
+
+### brain-gcd asciinema
+<a href="https://asciinema.org/a/BuBwMDbcwrTmurSZLJdMZxDal" target="_blank"><img src="https://asciinema.org/a/BuBwMDbcwrTmurSZLJdMZxDal.svg" /></a>
