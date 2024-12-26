@@ -1,4 +1,5 @@
 import random
+
 import prompt
 
 from brain_games.cli import welcome_user
@@ -22,12 +23,12 @@ def play(name: str) -> bool:
 	size = random.randint(5, 15)
 	progression = []
 	number = random.randint(0, 100)
-	for i in range (0, size + 1):
+	for i in range(0, size + 1):
 		progression.append(number)
 		number += step
 	random_index = random.randint(0, len(progression))
 	quiz_progression = []
-	for i in range (0, len(progression)):
+	for i in range(0, len(progression)):
 		if i == random_index:
 			quiz_progression.append('..')
 			continue

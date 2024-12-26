@@ -1,4 +1,5 @@
 import random
+
 import prompt
 
 from brain_games.cli import welcome_user
@@ -23,7 +24,7 @@ def get_lesser_number(first: int, second: int):
 
 def get_gcd(first: int, second: int) -> int:
 	gcd = 1
-	for i in range (2, get_lesser_number(first, second) + 1):
+	for i in range(2, get_lesser_number(first, second) + 1):
 		if first % i == 0 and second % i == 0:
 			gcd = i
 	return gcd

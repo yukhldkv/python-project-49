@@ -1,4 +1,5 @@
 import random
+
 import prompt
 
 from brain_games.cli import welcome_user
@@ -22,18 +23,19 @@ def is_prime(number: int) -> bool:
 		return False
 	if number <= 3:
 		return True
-	for i in range (2, number):
+	for i in range(2, number):
 		if number % i == 0:
 			return False
 	print('prime')
 	return True
+
 
 def play(name: str) -> bool:
 	random_number = random.randint(1, 1000)
 	print(f"Question: {random_number}")
 	answer = prompt.string("Your answer: ")
 	if is_prime(random_number) and answer == 'yes' or \
-        not(is_prime(random_number)) and answer == 'no':
+        not (is_prime(random_number)) and answer == 'no':
 		print('Correct!')
 		return True
 	if is_prime(random_number):
