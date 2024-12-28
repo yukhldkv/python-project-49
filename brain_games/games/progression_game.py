@@ -18,7 +18,7 @@ def logic(name: str) -> bool:
 	for i in range(0, size):
 		progression.append(number)
 		number += step
-	random_index = random.randint(0, len(progression))
+	random_index = random.randint(0, len(progression) - 1)
 	quiz_progression = []
 	for i in range(0, len(progression)):
 		if i == random_index:
