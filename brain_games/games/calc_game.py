@@ -22,7 +22,7 @@ def logic(name: str) -> bool:
 	answer = prompt.string('Your answer: ')
 	result = operation(first_number, second_number)
 	if int(answer) != result:
-		print(f"'{answer}' is wrong answer ;(." 
+		print(f"'{answer}' is wrong answer ;(. " 
 		f"Correct answer was '{result}'.")
 		print(f"Let's try again, {name}!")
 		return False

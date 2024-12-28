@@ -29,7 +29,7 @@ def logic(name: str) -> bool:
 	result = get_gcd(first_number, second_number)
 	answer = prompt.string("Your answer: ")
 	if int(answer) != result:
-		print(f"'{answer}' is wrong answer ;(." 
+		print(f"'{answer}' is wrong answer ;(. " 
 		f"Correct answer was '{result}'.")
 		print(f"Let's try again, {name}!")
 		return False

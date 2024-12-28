@@ -29,7 +29,7 @@ def logic(name: str) -> bool:
 	answer = prompt.string("Your answer: ")
 	result = progression[random_index]
 	if int(answer) != result:
-		print(f"'{answer}' is wrong answer ;(." 
+		print(f"'{answer}' is wrong answer ;(. " 
 		f"Correct answer was '{result}'.")
 		print(f"Let's try again, {name}!")
 		return False
