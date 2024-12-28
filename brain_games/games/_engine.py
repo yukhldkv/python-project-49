@@ -26,7 +26,8 @@ def run_game_loop(name: str, run_logic: Callable[[str], bool]):
         if run_check(name, run_logic):
             count += 1
         else:
-            count = 0
+            print(f"Let's try again, {name}!")
+            return
     print(f'Congratulations, {name}!')
     
 
