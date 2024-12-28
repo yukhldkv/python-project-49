@@ -15,7 +15,7 @@ def logic(name: str) -> bool:
 	size = random.randint(5, 15)
 	progression = []
 	number = random.randint(0, 100)
-	for i in range(0, size + 1):
+	for i in range(0, size):
 		progression.append(number)
 		number += step
 	random_index = random.randint(0, len(progression))
