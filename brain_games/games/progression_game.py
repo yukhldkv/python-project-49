@@ -25,7 +25,11 @@ def logic(name: str) -> bool:
 			quiz_progression.append('..')
 			continue
 		quiz_progression.append(progression[i])
-	print(f"Question: {quiz_progression}")
+	question_prompt = "Question: "
+	for i in range(0, len(progression)):
+		question_prompt += str(quiz_progression[i])
+		question_prompt += " "
+	print(question_prompt)
 	answer = prompt.string("Your answer: ")
 	result = progression[random_index]
 	if int(answer) != result:
