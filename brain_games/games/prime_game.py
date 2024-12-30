@@ -5,6 +5,10 @@ import prompt
 from brain_games.games._engine import launch_game
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 1000
+
+
 def play():
     question = ("Answer \"yes\" if given number is prime. "
                 "Otherwise answer \"no\".")
@@ -23,7 +27,7 @@ def is_prime(number: int) -> bool:
 
 
 def logic(name: str) -> bool:
-	random_number = random.randint(1, 1000)
+	random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	print(f"Question: {random_number}")
 	answer = prompt.string("Your answer: ")
 	if is_prime(random_number) and answer == 'yes' or \

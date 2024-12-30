@@ -5,13 +5,17 @@ import prompt
 from brain_games.games._engine import launch_game
 
 
+LOWEST_NUMBER = 1
+HIGHEST_NUMBER = 1000
+
+
 def play():
 	question = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
 	launch_game(question, logic)
      
 
 def logic(name: str) -> bool:
-    random_number = random.randint(1, 1000)
+    random_number = random.randint(LOWEST_NUMBER, HIGHEST_NUMBER)
     print(f'Question: {random_number}')
     answer = prompt.string('Your answer: ')
     if random_number % 2 == 0 and answer == 'yes' or \

@@ -5,6 +5,9 @@ import prompt
 from brain_games.cli import welcome_user
 
 
+MAX_ATTEMPTS = 3
+
+
 def launch_game(question: str, run_logic: Callable[[str], bool]):
 	name = welcome_user()
 	play_game(name, question, run_logic)
@@ -17,7 +20,7 @@ def play_game(name: str, question: str, run_logic: Callable[[str], bool]):
 
 def run_game_loop(name: str, run_logic: Callable[[str], bool]):
     count = 0
-    while count < 3:
+    while count < MAX_ATTEMPTS:
         if run_check(name, run_logic):
             count += 1
         else:

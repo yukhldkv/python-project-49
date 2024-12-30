@@ -6,17 +6,19 @@ import prompt
 from brain_games.games._engine import launch_game
 
 
+OPERATIONS = [('+', operator.add), ('-', operator.sub), ('*', operator.mul)]
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
 def play():
 	question = "What is the result of the expression?"
 	launch_game(question, logic)
 
 
-OPERATIONS = [('+', operator.add), ('-', operator.sub), ('*', operator.mul)]
-
-
 def logic(name: str) -> bool:
-	first_number = random.randint(1, 100)
-	second_number = random.randint(1, 100)
+	first_number = random.randint(MIN_NUMBER, MAX_NUMBER)
+	second_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	operation_symbol, operation = random.choice(OPERATIONS)
 	print(f"Question: {first_number} {operation_symbol} {second_number}")
 	answer = prompt.string('Your answer: ')

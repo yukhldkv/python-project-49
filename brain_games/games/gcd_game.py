@@ -5,6 +5,10 @@ import prompt
 from brain_games.games._engine import launch_game
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
 def play():
 	question = "Find the greatest common divisor of given numbers.."
 	launch_game(question, logic)
@@ -23,8 +27,8 @@ def get_gcd(first: int, second: int) -> int:
 
 
 def logic(name: str) -> bool:
-	first_number = random.randint(1, 100)
-	second_number = random.randint(1, 100)
+	first_number = random.randint(MIN_NUMBER, MAX_NUMBER)
+	second_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	print(f"Question: {first_number} {second_number}")
 	result = get_gcd(first_number, second_number)
 	answer = prompt.string("Your answer: ")

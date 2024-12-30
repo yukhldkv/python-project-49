@@ -5,16 +5,24 @@ import prompt
 from brain_games.games._engine import launch_game
 
 
+MIN_STEP = 1
+MAX_STEP = 100
+MIN_SIZE = 5
+MAX_SIZE = 15
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
 def play():
 	question = "What number is missing in the progression?"
 	launch_game(question, logic)
 	
 
 def logic(name: str) -> bool:
-	step = random.randint(1, 100)
-	size = random.randint(5, 15)
+	step = random.randint(MIN_STEP, MAX_STEP)
+	size = random.randint(MIN_SIZE, MAX_SIZE)
 	progression = []
-	number = random.randint(0, 100)
+	number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	for i in range(0, size):
 		progression.append(number)
 		number += step
