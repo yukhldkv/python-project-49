@@ -4,7 +4,6 @@ import prompt
 
 from brain_games.games._engine import launch_game
 
-
 MIN_STEP = 1
 MAX_STEP = 100
 MIN_SIZE = 5

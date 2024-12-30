@@ -4,9 +4,8 @@ import prompt
 
 from brain_games.games._engine import launch_game
 
-
-LOWEST_NUMBER = 1
-HIGHEST_NUMBER = 1000
+MIN_NUMBER = 1
+MAX_NUMBER = 1000
 
 
 def play():
@@ -15,7 +14,7 @@ def play():
      
 
 def logic(name: str) -> bool:
-    random_number = random.randint(LOWEST_NUMBER, HIGHEST_NUMBER)
+    random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
     print(f'Question: {random_number}')
     answer = prompt.string('Your answer: ')
     if random_number % 2 == 0 and answer == 'yes' or \

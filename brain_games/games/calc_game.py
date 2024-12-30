@@ -5,7 +5,6 @@ import prompt
 
 from brain_games.games._engine import launch_game
 
-
 OPERATIONS = [('+', operator.add), ('-', operator.sub), ('*', operator.mul)]
 MIN_NUMBER = 1
 MAX_NUMBER = 100

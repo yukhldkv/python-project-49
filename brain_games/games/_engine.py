@@ -1,9 +1,6 @@
 from typing import Callable
 
-import prompt
-
 from brain_games.cli import welcome_user
-
 
 MAX_ATTEMPTS = 3
 
