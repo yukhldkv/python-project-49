@@ -18,7 +18,7 @@ def play_game(name: str, question: str, run_logic: Callable[[], bool]):
 def run_game_loop(name: str, run_logic: Callable[[], bool]):
     count = 0
     while count < MAX_ATTEMPTS:
-        if run_check(name, run_logic):
+        if run_check(run_logic):
             count += 1
         else:
             print(f"Let's try again, {name}!")
@@ -26,5 +26,5 @@ def run_game_loop(name: str, run_logic: Callable[[], bool]):
     print(f'Congratulations, {name}!')
     
 
-def run_check(name: str, run_logic: Callable[[], bool]) -> bool:
+def run_check(run_logic: Callable[[], bool]) -> bool:
 	return run_logic()
