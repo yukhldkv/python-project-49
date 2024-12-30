@@ -18,23 +18,20 @@ def play():
 	
 
 def logic(name: str) -> bool:
+	progression = []
 	step = random.randint(MIN_STEP, MAX_STEP)
 	size = random.randint(MIN_SIZE, MAX_SIZE)
-	progression = []
-	number = random.randint(MIN_NUMBER, MAX_NUMBER)
+	element = random.randint(MIN_NUMBER, MAX_NUMBER)
 	for i in range(0, size):
-		progression.append(number)
-		number += step
+		progression.append(element)
+		element += step
 	random_index = random.randint(0, len(progression) - 1)
-	quiz_progression = []
-	for i in range(0, len(progression)):
-		if i == random_index:
-			quiz_progression.append('..')
-			continue
-		quiz_progression.append(progression[i])
 	question_prompt = "Question: "
 	for i in range(0, len(progression)):
-		question_prompt += str(quiz_progression[i])
+		if i == random_index:
+			question_prompt += '.. '
+			continue
+		question_prompt += str(progression[i])
 		question_prompt += " "
 	print(question_prompt)
 	answer = prompt.string("Your answer: ")

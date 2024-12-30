@@ -13,13 +13,9 @@ def play():
 	launch_game(question, logic)
 
 
-def get_lesser_number(first: int, second: int):
-	return first if first <= second else second
-
-
 def get_gcd(first: int, second: int) -> int:
 	gcd = 1
-	for i in range(2, get_lesser_number(first, second) + 1):
+	for i in range(2, min(first, second) + 1):
 		if first % i == 0 and second % i == 0:
 			gcd = i
 	return gcd
