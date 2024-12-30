@@ -2,17 +2,12 @@ from typing import Callable
 
 import prompt
 
+from brain_games.cli import welcome_user
+
 
 def launch_game(question: str, run_logic: Callable[[str], bool]):
 	name = welcome_user()
 	play_game(name, question, run_logic)
-
-
-def welcome_user() -> str:
-	print('Welcome to the Brain Games!')
-	name = prompt.string('May I have your name? ')
-	print(f'Hello, {name}!')
-	return name
 
 
 def play_game(name: str, question: str, run_logic: Callable[[str], bool]):
