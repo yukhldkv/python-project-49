@@ -15,7 +15,7 @@ def play():
 	launch_game(question, logic)
 
 
-def logic(name: str) -> bool:
+def logic() -> bool:
 	first_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	second_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	operation_symbol, operation = random.choice(OPERATIONS)

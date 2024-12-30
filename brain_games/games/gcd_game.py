@@ -21,7 +21,7 @@ def get_gcd(first: int, second: int) -> int:
 	return gcd
 
 
-def logic(name: str) -> bool:
+def logic() -> bool:
 	first_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	second_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	print(f"Question: {first_number} {second_number}")

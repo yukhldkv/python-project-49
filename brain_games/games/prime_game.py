@@ -25,7 +25,7 @@ def is_prime(number: int) -> bool:
 	return True
 
 
-def logic(name: str) -> bool:
+def logic() -> bool:
 	random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 	print(f"Question: {random_number}")
 	answer = prompt.string("Your answer: ")

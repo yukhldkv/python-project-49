@@ -17,7 +17,7 @@ def play():
 	launch_game(question, logic)
 	
 
-def logic(name: str) -> bool:
+def logic() -> bool:
 	progression = []
 	step = random.randint(MIN_STEP, MAX_STEP)
 	size = random.randint(MIN_SIZE, MAX_SIZE)
